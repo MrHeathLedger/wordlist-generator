@@ -1,7 +1,6 @@
 from colorama import init, Fore
 from os import system, listdir
 from itertools import product
-from platform import platform
 from time import sleep
 import sys
 
@@ -17,7 +16,7 @@ wordlist_generator = """
 """
 
 
-def clear(): system("cls") if platform().startswith("Windows") else system("clear")
+def clear(): system("cls || clear")
 
 
 def progress_bar(total, completed, bar_symbol="█" , space_symbol="-", lenght=50):
